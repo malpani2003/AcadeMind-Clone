@@ -1,18 +1,17 @@
-$(".day-1").click(function () {
-    $(".day_1_class").slideToggle()
-});
 
-$(".day-2").click(function () {
-    $(".day_2_class").slideToggle()
-});
+many_day=document.querySelectorAll(".course h4").length;
 
-$(".day-3").click(function () {
-    $(".day_3_class").slideToggle()
-});
+for(i=0;i<many_day;i++){
+    day=`.day_${i+1}_class`
+    $(day).css("display","none");
+}
 
-$(".day-4").click(function () {
-    $(".day_4_class").slideToggle()
-});
+// console.log(many_day);
+function show(choice){
+    day=`.day_${choice}_class`;
+    $(day).slideToggle();
+    
+}
 
 function play_promo(){
     video=document.getElementById("video_intro")
